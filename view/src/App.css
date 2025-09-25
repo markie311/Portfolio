@@ -378,6 +378,183 @@ a:hover {
   }
 }
 
+/* Degrees and Certifications Section */
+.degrees-content {
+  position: relative;
+  z-index: 1;
+}
+
+.degrees-subsection,
+.certifications-subsection {
+  margin-bottom: 60px;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(46, 139, 87, 0.3);
+}
+
+.degrees-grid,
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.degree-card,
+.certification-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  border-bottom: 4px solid transparent;
+  position: relative;
+}
+
+.degree-card::before,
+.certification-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(46, 139, 87, 0.05) 50%, transparent 100%);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 0;
+}
+
+.degree-card:hover,
+.certification-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-bottom-color: var(--secondary-color);
+  box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2);
+}
+
+.degree-card:hover::before,
+.certification-card:hover::before {
+  opacity: 1;
+  animation: cardGradient 3s infinite alternate;
+}
+
+.degree-image,
+.certification-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.degree-image::after,
+.certification-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 70%, var(--card-background) 100%);
+  opacity: 0.7;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.degree-image .image-placeholder,
+.certification-image .image-placeholder {
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.3) 0%, rgba(80, 200, 120, 0.1) 100%);
+}
+
+.degree-thumbnail,
+.certification-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.degree-card:hover .degree-thumbnail,
+.certification-card:hover .certification-thumbnail {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.degree-content,
+.certification-content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.degree-content h4,
+.certification-content h4 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.degree-card:hover .degree-content h4,
+.certification-card:hover .certification-content h4 {
+  color: var(--secondary-color);
+  text-shadow: 0 0 8px rgba(80, 200, 120, 0.3);
+}
+
+.institution,
+.issuer {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.year,
+.issue-date,
+.expiry-date {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.gpa {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.degree-modal-content,
+.certification-modal-content {
+  padding: 10px;
+}
+
+/* Responsive adjustments for degrees section */
+@media (max-width: 768px) {
+  .degrees-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .degree-card,
+  .certification-card {
+    max-width: 100%;
+  }
+}
+
 /* About Section */
 .about-content {
   display: flex;
@@ -1166,7 +1343,9 @@ a:hover {
 }
 
 .skill-modal-content,
-.project-modal-content {
+.project-modal-content,
+.degree-modal-content,
+.certification-modal-content {
   padding: 10px;
 }
 
@@ -1310,6 +1489,11 @@ blockquote {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .degrees-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
   }
 }
 
