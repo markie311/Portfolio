@@ -82,8 +82,8 @@ const App = () => {
     {
       title: "Microsoft Office Specialist (MOS): Excel Associate (Microsoft 365 Apps)",
       issuer: "Microsoft (officially signed by Satya Nadella, Chief Executive Officer)",
-      issueDate: "Semtember 25, 2025",
-      expiryDate: "xxxx-xx-xxxx",
+      issueDate: "September 25, 2025",
+      expiryDate: "September 25, 2030",
       credentialId: "LNT4-S4BS",
       description:
         "I successfully earned the Microsoft Office Specialist (MOS): Excel Associate (Microsoft 365 Apps) certification, demonstrating strong proficiency in Excel essentials and advanced functionalities. This certification validates my ability to create, manage, and analyze data using professional-grade spreadsheets, ensuring accuracy and efficiency in business and academic tasks.",
