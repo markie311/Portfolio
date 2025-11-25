@@ -795,7 +795,7 @@ const App = () => {
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
-            <div className="footer-logo">YourName</div>
+            <div className="footer-logo">Mark Anthony Apura Beloy</div>
             <div className="footer-links">
               <a href="#about">About</a>
               <a href="#skills">Skills</a>
@@ -816,7 +816,7 @@ const App = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} YourName. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Mark Anthony Apura Beloy. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
