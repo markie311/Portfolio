@@ -407,7 +407,7 @@ const App = () => {
       {/* Header/Hero Section */}
       <header className="hero">
         <nav className="nav">
-          <div className="logo">YourName</div>
+          <div className="logo">Mark Anthony Apura Beloy</div>
           <ul className="nav-links">
             <li>
               <a href="#about">About</a>
